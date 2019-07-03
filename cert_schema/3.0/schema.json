@@ -191,13 +191,13 @@
       "uniqueItems": true
     },
     "SignatureLine": {
-      "$ref": "https://w3id.org/blockcerts/schema/3.0/signatureLineSchema.json"
+      "$ref": "https://w3id.org/blockcerts/schema/2.1/signatureLineSchema.json"
     },
     "RecipientProfile": {
-      "$ref": "https://w3id.org/blockcerts/schema/3.0/recipientSchema.json"
+      "$ref": "https://w3id.org/blockcerts/schema/2.1/recipientSchema.json"
     },
     "MerkleProof2017": {
-      "$ref": "https://w3id.org/blockcerts/schema/3.0/merkleProof2017Schema.json"
+      "$ref": "https://w3id.org/blockcerts/schema/2.1/merkleProof2017Schema.json"
     },
     "BadgeClass": {
       "description": "From https://w3id.org/openbadges#BadgeClass",
@@ -233,7 +233,7 @@
           "description": "Defined by `criteria` property of https://w3id.org/openbadges#BadgeClass. This field is required in Open Badges. If migrating from an earlier version, a quick change is to reuse the `description` field"
         },
         "issuer": {
-          "$ref": "https://w3id.org/blockcerts/schema/3.0/issuerSchema.json",
+          "$ref": "https://gist.githubusercontent.com/faustow/028faf1088c8c7a8e75df328f007d53a/raw/6198ab26c262e99581a096b251dd9ac9835545a7/issuerSchema_v3.json",
           "description": "Defined by `issuer` property of https://w3id.org/openbadges#BadgeClass, with Blockcerts extensions for blockchain verification of badges."
         },
         "alignment": {
