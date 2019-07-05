@@ -32,6 +32,10 @@ BLOCKCERTS_V2_1_CONTEXT = 'https://w3id.org/blockcerts/schema/2.1/context.json'
 BLOCKCERTS_V2_1_SCHEMA = 'https://w3id.org/blockcerts/schema/2.1/schema.json'
 BLOCKCERTS_V2_1_CANONICAL_CONTEXT = 'https://w3id.org/blockcerts/v2.1'
 
+BLOCKCERTS_V3_0_CONTEXT = 'https://gist.githubusercontent.com/faustow/3ffa097fef88445576fee3df5be82381/raw/f406bad23578377d56aec35be0633c9974c213d1/blockcerts_v3_context.json'
+BLOCKCERTS_V3_0_SCHEMA = 'https://gist.githubusercontent.com/faustow/24d04da0c8c8d31049ffc50cb530aa99/raw/0a2cc6b3f60f4dd46015107d21405f31b6810e90/blockcerts_v3_schema.json'
+BLOCKCERTS_V3_0_CANONICAL_CONTEXT = 'https://gist.githubusercontent.com/faustow/f7979a5cffa48716826af2ad2bb8ecd2/raw/7d884f163d6d4a17c983e712f4bd8550136a00e3/blockcerts_v3_canonical_context.json'
+
 BLOCKCERTS_VOCAB = 'https://w3id.org/blockcerts/v2.1#'
 
 JSONLD_OPTIONS = {'algorithm': 'URDNA2015', 'format': 'application/nquads'}
@@ -53,6 +57,9 @@ OBI_JSON_LD_CONTEXT_V2 = os.path.join(BASE_DIR, '2.0/obi.json')
 
 JSON_LD_CONTEXT_V2_1 = os.path.join(BASE_DIR, '2.1/context.json')
 OBI_JSON_LD_CONTEXT_V2_1 = os.path.join(BASE_DIR, '2.1/obi.json')
+
+JSON_LD_CONTEXT_V3_0 = os.path.join(BASE_DIR, '3.0/context.json')
+OBI_JSON_LD_CONTEXT_V3_0 = os.path.join(BASE_DIR, '3.0/obi.json')
 
 PRELOADED_CONTEXTS = {}
 
@@ -76,6 +83,11 @@ with open(JSON_LD_CONTEXT_V2_1) as data_file:
     bc_context = json.load(data_file)
     PRELOADED_CONTEXTS[BLOCKCERTS_V2_1_CONTEXT] = bc_context
     PRELOADED_CONTEXTS[BLOCKCERTS_V2_1_CANONICAL_CONTEXT] = bc_context
+
+with open(JSON_LD_CONTEXT_V3_0) as data_file:
+    bc_context = json.load(data_file)
+    PRELOADED_CONTEXTS[BLOCKCERTS_V3_0_CONTEXT] = bc_context
+    PRELOADED_CONTEXTS[BLOCKCERTS_V3_0_CANONICAL_CONTEXT] = bc_context
 
 
 def to_loader_response(data, url):
